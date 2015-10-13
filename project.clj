@@ -1,4 +1,4 @@
-(defproject appengine-magic "0.5.0"
+(defproject emezeske/appengine-magic "0.5.1"
   :description "Google App Engine library for Clojure."
   :min-lein-version "1.7.0"
   :repositories {"releases" "http://appengine-magic-mvn.googlecode.com/svn/releases/"
@@ -24,6 +24,7 @@
                  [com.google.appengine/appengine-local-runtime "1.6.3.1"]
                  [com.google.appengine/appengine-local-runtime-shared "1.6.3.1"]
                  [com.google.appengine/appengine-testing "1.6.3.1"]
-                 [com.google.appengine/appengine-tools-api "1.6.3.1"]]
+                 [com.google.appengine/appengine-tools-api "1.6.3.1"]
+                 [lancet "1.0.2"]]
   :dev-dependencies [[org.clojure/clojure "1.2.1"]
                      [swank-clojure "1.4.0"]])
