@@ -7,6 +7,10 @@
   (:import java.io.File))
 
 
+; TODO(emezeske): This is totally broken for Leiningen 2.0+. Don't even try to
+; use it. Just use a combination of "lein uberjar" and some hand-crafting of the
+; war/ directory. I think the simplest thing to do is to just nuke all of the
+; appengine-magic Lein plugin stuff from orbit.
 (defn appengine-prepare [project]
   (let [prj-application (or (:appengine-application project) (:name project))
         prj-display-name (or (:appengine-display-name project) (:name project))

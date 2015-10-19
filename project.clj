@@ -1,4 +1,4 @@
-(defproject emezeske/appengine-magic "0.5.1"
+(defproject emezeske/appengine-magic "0.5.1-SNAPSHOT"
   :description "Google App Engine library for Clojure."
   :min-lein-version "1.7.0"
   :repositories {"releases" "http://appengine-magic-mvn.googlecode.com/svn/releases/"
@@ -19,12 +19,20 @@
                  [commons-el "1.0"]
                  ;; main App Engine libraries
                  [com.google.appengine/appengine-api-1.0-sdk "1.6.3.1"]
+
+                 ; DISABLE FOR PROD PUSHES and lein install
+                 ; TODO(emezeske): This is all a disaster, really we need to just rip
+                 ; out all the Leiningen plugin stuff and perhaps create two packages:
+                 ; the dev package and the prod package. One day...
+                 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
                  [com.google.appengine/appengine-api-labs "1.6.3.1"]
                  [com.google.appengine/appengine-api-stubs "1.6.3.1"]
                  [com.google.appengine/appengine-local-runtime "1.6.3.1"]
                  [com.google.appengine/appengine-local-runtime-shared "1.6.3.1"]
                  [com.google.appengine/appengine-testing "1.6.3.1"]
                  [com.google.appengine/appengine-tools-api "1.6.3.1"]
+                 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
                  [lancet "1.0.2"]]
   :dev-dependencies [[org.clojure/clojure "1.2.1"]
                      [swank-clojure "1.4.0"]])
